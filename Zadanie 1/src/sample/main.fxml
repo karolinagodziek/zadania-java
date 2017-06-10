@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="330.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TextField fx:id="valueTextField" layoutX="100.0" layoutY="35.0" />
+        <Label layoutX="60.0" layoutY="40.0" text="Value" />
+        <Label layoutX="35.0" layoutY="120.0" text="Convert from:" />
+        <Label layoutX="200.0" layoutY="120.0" text="Convert to:" />
+        <RadioButton fx:id="celciusStart" layoutX="35.0" layoutY="140.0" mnemonicParsing="false" text="Celcius">
+         <toggleGroup>
+            <ToggleGroup fx:id="from" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="fahrenheitStart" layoutX="35.0" layoutY="160.0" mnemonicParsing="false" text="Fahrenheit" toggleGroup="$from" />
+        <RadioButton fx:id="kelvinStart" accessibleRole="RADIO_MENU_ITEM" layoutX="35.0" layoutY="180.0" mnemonicParsing="false" text="Kelvin" toggleGroup="$from" />
+        <RadioButton fx:id="celciusEnd" layoutX="200.0" layoutY="140.0" mnemonicParsing="false" text="Celcius">
+         <toggleGroup>
+            <ToggleGroup fx:id="to" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="kelvinEnd" layoutX="200.0" layoutY="160.0" mnemonicParsing="false" text="Kelvin" toggleGroup="$to" />
+        <RadioButton fx:id="fahrenheitEnd" layoutX="200.0" layoutY="180.0" mnemonicParsing="false" text="Fahrenheit" toggleGroup="$to" />
+        <Label layoutX="55.0" layoutY="230.0" text="Output" />
+        <TextField fx:id="output" editable="false" layoutX="110.0" layoutY="220.0" prefHeight="32.0" prefWidth="100.0" />
+    </children>
+</AnchorPane>
